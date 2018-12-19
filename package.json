@@ -1,6 +1,6 @@
 {
   "name": "hotroute",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Fast stateful routing for static and server rendered sites using web components",
   "repository": {
     "type": "git",
@@ -9,7 +9,7 @@
   "source": "src/index.ts",
   "main": "dist/bundle.js",
   "umd:main": "dist/bundle.umd.js", 
-  "module": "dist/bundle.mjs",    
+  "module": "dist/bundle.mjs",
   "typings": "dist/index.d.ts",
   "scripts": {
     "test": "jest",

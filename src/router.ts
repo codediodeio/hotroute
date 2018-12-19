@@ -65,8 +65,8 @@ export class Router {
         console.time('⚡');
       }
       // Get Page
+      window.dispatchEvent(new CustomEvent('router:fetch'));
       const html = await fetch(next).then(v => v.text());
-      document.dispatchEvent(new CustomEvent('router:fetch'));
 
       // Merge BODY
       const nextDoc = formatNextDocument(html);
@@ -76,7 +76,7 @@ export class Router {
       const nextHead = nextDoc.head;
       const updatedHead = mergeHead(nextHead);
 
-      document.dispatchEvent(new CustomEvent('router:end'));
+      window.dispatchEvent(new CustomEvent('router:end'));
 
       this.prefetch();
 
