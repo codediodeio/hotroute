@@ -2,6 +2,10 @@
   "name": "hotroute",
   "version": "0.0.1",
   "description": "Fast stateful routing for static and server rendered sites using web components",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codediodeio/hotroute.git"
+  },
   "source": "src/index.ts",
   "main": "dist/bundle.js",
   "typings": "dist/index.d.ts",
@@ -23,6 +27,7 @@
   "devDependencies": {
     "@types/jest": "^23.3.10",
     "fs-extra": "^7.0.0",
+    "intersection-observer": "^0.5.1",
     "jest": "^23.6.0",
     "jsdom": "^13.0.0",
     "rollup": "^0.68.0",

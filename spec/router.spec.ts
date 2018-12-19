@@ -1,10 +1,12 @@
+import 'intersection-observer';
 import 'jest';
-import { startHotRoute, Router } from '../src';
+import hotroute from '../src';
+import { Router } from '../src/router';
 
 describe('State', () => {
     let router;
     beforeAll(() => {
-        router = startHotRoute( { log: true });
+        router = hotroute( { log: true, prefetch: false });
     })
 
     test('startHotRoute should return an instance of Router', () => {

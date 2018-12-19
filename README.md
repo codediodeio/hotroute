@@ -2,7 +2,7 @@
 
 Status: Experimental 🧫
 
-An zero-config router and prefetcher for static or server-rendered sites.
+An 2.5kB zero-config router and prefetcher for static or server-rendered sites.
 
 ## Why?
 
@@ -75,5 +75,4 @@ Here's how things change in the DOM on a navigation event.
 ### Caveats
 
 - Body scripts will never run (but you should be using defer anyway)
-- All 
 
