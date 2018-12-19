@@ -4,7 +4,7 @@ export interface HotRouteOptions {
 }
 
 export interface RouteChangeData {
-  type: 'link' | 'popstate' | 'noop' | 'disqualified' | 'scroll' | any;
+  type: 'link' | 'popstate' | 'noop' | 'disqualified' | 'scroll' | 'go' | string;
   next?: string;
   prev?: string;
 }
