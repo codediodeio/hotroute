@@ -1,7 +1,7 @@
 {
   "name": "hotroute",
   "version": "0.0.1",
-  "description": "Fast routing for static and server rendered sites using web components",
+  "description": "Fast stateful routing for static and server rendered sites using web components",
   "source": "src/index.ts",
   "main": "dist/bundle.js",
   "typings": "dist/index.d.ts",
@@ -19,7 +19,7 @@
     "prefetch"
   ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^23.3.10",
     "fs-extra": "^7.0.0",
