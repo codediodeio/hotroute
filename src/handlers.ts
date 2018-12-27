@@ -2,6 +2,13 @@ import { RouteChangeData } from './interfaces';
 
 // url == https://example.com/foo/bar
 // Ensures consistent formatting for href
+
+export function scrollToTop(type) {
+  if (['link', 'go'].includes(type)) {
+    window.scrollTo({ top: 0 })
+  }
+}
+
 export function fullURL(url?: string) {
     const href = new URL(url || window.location.href).href;
     return href.endsWith('/') ? href : `${href}/`;

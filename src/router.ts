@@ -1,5 +1,5 @@
 import { HotRouteOptions, RouteChangeData } from './interfaces';
-import { handleLinkClick, handlePopState } from './handlers';
+import { handleLinkClick, handlePopState, scrollToTop } from './handlers';
 import { mergeHead, formatNextDocument } from './dom';
 import quicklink from 'quicklink';
 
@@ -43,7 +43,6 @@ export class Router {
   private onClick(e: MouseEvent) {
     if (this.enabled) {
       this.replaceDOM(handleLinkClick(e));
-      window.scrollTo({ top: 0 });
     }
   }
 
@@ -77,6 +76,8 @@ export class Router {
       const nextHead = nextDoc.head;
       const updatedHead = mergeHead(nextHead);
 
+      scrollToTop(type);
+
       window.dispatchEvent(new CustomEvent('router:end'));
 
       this.prefetch();
@@ -84,6 +85,7 @@ export class Router {
       if (this.opts.log) {
         console.timeEnd('⚡');
       }
+      
     }
   }
 }
