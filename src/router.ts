@@ -43,6 +43,7 @@ export class Router {
   private onClick(e: MouseEvent) {
     if (this.enabled) {
       this.replaceDOM(handleLinkClick(e));
+      window.scrollTo({ top: 0 });
     }
   }
 
