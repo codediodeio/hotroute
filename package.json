@@ -1,6 +1,6 @@
 {
   "name": "hotroute",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Fast stateful routing for static and server rendered sites using web components",
   "repository": {
     "type": "git",

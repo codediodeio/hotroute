@@ -16,7 +16,7 @@ export function fullURL(url?: string) {
   
   // Changes URL on history
 export function addToPushState(url: string) {
-    if (!window.history.state || window.history.state.href !== url) {
+    if (!window.history.state || window.history.state.url !== url) {
       window.history.pushState({ url }, 'internalLink', url);
     }
   }
