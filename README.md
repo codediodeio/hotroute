@@ -46,6 +46,13 @@ window.addEventListener('router:fetch', showLoader);
 window.addEventListener('router:end', hideLoader);
 ```
 
+To re-evaluate nodes in the header use the `data-reload` attribute along with a unique value for that attribute. Omitting that unique id will cause only the last node to replace all the previous ones.
+
+```js
+<script data-reload="home-js" src="home.js"></script>
+<link data-reload="home-css" rel="stylesheet" type="text/css" href="styles.css">
+```
+
 ### What is happening in the DOM?
 
 Here's how things change in the DOM on a navigation event. 
@@ -62,7 +69,7 @@ Here's how things change in the DOM on a navigation event.
     <script src="my-bundle.js"></script> 
 
     <!-- head scripts or nodes can be re-evaluated with data-reload -->
-    <script data-reload src="my-other-bundle.js"></script> 
+    <script data-reload="my-other-bundle" src="my-other-bundle.js"></script> 
 </head>
 <body>
     <!-- ALL body content changes -->
